@@ -3,94 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia de Tenis de Élite</title>
+    <title>TennisCoach - Eleva tu Juego</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="logo">
-                <a href="#">TENIS DE ÉLITE</a>
-            </div>
-            <ul>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#news">Noticias</a></li>
-                <li><a href="#contact">Contacto</a></li>
+            <a href="#" class="logo">TennisCoach</a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item dropdown-toggle" data-target="cursos-info">Cursos</a></li>
+                <li><a href="#" class="nav-item dropdown-toggle" data-target="coach-info">El Coach</a></li>
+                <li><a href="#" class="nav-item dropdown-toggle" data-target="metodologia-info">Nuestra Metodología</a></li>
+                <li><a href="#precios" class="nav-item">Precios</a></li>
+                <li><a href="#contacto" class="nav-item">Contacto</a></li>
             </ul>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-secondary">Login</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>Transforma tu Juego, Alcanza tu Potencial</h1>
-                <p>Entrenamiento de tenis de clase mundial para jugadores de todos los niveles.</p>
-                <a href="#contact" class="cta-button">Reserva tu Clase</a>
+                <h1 class="fade-in">Eleva tu Juego al Siguiente Nivel</h1>
+                <p class="fade-in" style="animation-delay: 0.2s;">Análisis de video y coaching personalizado por expertos.</p>
+                <button class="btn btn-primary fade-in" style="animation-delay: 0.4s;">Inscríbete Ahora</button>
             </div>
         </section>
 
-        <section id="services">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-cards">
-                <div class="card">
-                    <h3>Clases Privadas</h3>
-                    <p>Atención individualizada para perfeccionar tu técnica y estrategia.</p>
-                </div>
-                <div class="card">
-                    <h3>Análisis de Video</h3>
-                    <p>Desglosamos tu juego con tecnología de punta para una mejora precisa.</p>
-                </div>
-                <div class="card">
-                    <h3>Campamentos de Verano</h3>
-                    <p>Experiencias intensivas de entrenamiento en un ambiente divertido y competitivo.</p>
-                </div>
-            </div>
+        <div id="content-display-area">
+            <section id="cursos-info" class="content-section hidden">
+                <h2>Nuestros Cursos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Praesent in sem ut libero pulvinar posuere. Nullam vel ex vel nibh tincidunt hendrerit. Vivamus eget sapien vel quam feugiat dapibus. Integer nec quam vitae justo aliquam commodo.</p>
+            </section>
+            <section id="coach-info" class="content-section hidden">
+                <h2>Conoce al Coach</h2>
+                <p>Donec sit amet magna nec sem laoreet congue. Phasellus feugiat, justo ac laoreet placerat, ex justo euismod magna, a bibendum urna turpis at quam. Curabitur non justo id libero fermentum vulputate. Proin sed finibus nulla, eget consequat velit.</p>
+            </section>
+            <section id="metodologia-info" class="content-section hidden">
+                <h2>Nuestra Metodología</h2>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed vitae justo at arcu auctor blandit. Duis ac metus nec libero facilisis rhoncus.</p>
+            </section>
+        </div>
+
+        <section id="precios" class="scroll-section">
+            <h2>Planes y Precios</h2>
+            <p>Contenido sobre precios irá aquí.</p>
         </section>
 
-        <section id="about">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/400" alt="Entrenador de Tenis">
-                </div>
-                <div class="about-text">
-                    <h2>Conoce al Entrenador</h2>
-                    <p>Con más de 20 años de experiencia compitiendo y entrenando al más alto nivel, nuestro entrenador principal ha ayudado a cientos de jugadores a alcanzar sus metas. Su filosofía se centra en una base técnica sólida, una mentalidad fuerte y un amor por el juego.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="news">
-            <h2>Últimas Noticias y Eventos</h2>
-            <div class="news-items">
-                <div class="news-item">
-                    <h3>Torneo de Verano 2025</h3>
-                    <p>Inscripciones abiertas para nuestro torneo anual. ¡No te quedes fuera!</p>
-                    <span>Julio 2025</span>
-                </div>
-                <div class="news-item">
-                    <h3>Nuevo Programa Junior</h3>
-                    <p>Lanzamos un nuevo programa de desarrollo para jóvenes promesas de 8 a 12 años.</p>
-                    <span>Junio 2025</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Ponte en Contacto</h2>
-            <form>
-                <input type="text" name="name" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-                <textarea name="message" placeholder="Tu Mensaje" required></textarea>
-                <button type="submit" class="cta-button">Enviar Mensaje</button>
-            </form>
+        <section id="contacto" class="scroll-section">
+            <h2>Contacto</h2>
+            <p>Formulario de contacto irá aquí.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Academia de Tenis de Élite. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2025 TennisCoach. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Modal de Login -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Correo Electrónico" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Sign Up -->
+    <div id="signup-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <form id="signup-form">
+                <input type="email" id="signup-email" placeholder="Correo Electrónico" required>
+                <input type="password" id="signup-password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

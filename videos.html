@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videoteca - TennisCoach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Script de protección de ruta -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script>
+        // **IMPORTANTE**: Pega aquí la misma configuración de Firebase que en script.js
+        const firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "TU_AUTH_DOMAIN",
+            projectId: "TU_PROJECT_ID",
+            storageBucket: "TU_STORAGE_BUCKET",
+            messagingSenderId: "TU_MESSAGING_SENDER_ID",
+            appId: "TU_APP_ID"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        firebase.auth().onAuthStateChanged(user => {
+            if (!user) {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">TennisCoach</a>
+            <div class="auth-buttons">
+                <button id="logout-btn" class="btn btn-primary">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="video-library">
+            <h1>Videoteca de Correcciones</h1>
+            <div class="video-grid">
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/400x225.png/0A2342/FFFFFF?text=Video" alt="Análisis de video">
+                    <h3>Análisis de Saque - Video 1</h3>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/400x225.png/0A2342/FFFFFF?text=Video" alt="Análisis de video">
+                    <h3>Corrección de Derecha - Video 1</h3>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/400x225.png/0A2342/FFFFFF?text=Video" alt="Análisis de video">
+                    <h3>Táctica de Volea - Video 2</h3>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/400x225.png/0A2342/FFFFFF?text=Video" alt="Análisis de video">
+                    <h3>Juego de Pies Avanzado</h3>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/400x225.png/0A2342/FFFFFF?text=Video" alt="Análisis de video">
+                    <h3>Análisis de Revés a dos manos</h3>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/400x225.png/0A2342/FFFFFF?text=Video" alt="Análisis de video">
+                    <h3>Estrategia de Partido</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TennisCoach. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
